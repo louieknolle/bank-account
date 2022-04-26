@@ -1,39 +1,30 @@
 // Business Logic for Bank Account
-function BankAccount() {
-  this.name = {};
-  this.balanceId = 0;
+function BankAccount(name, initialDeposit) {
+  this.name = name;
+  this.balance = initialDeposit;
 }
 
-BankAccount.prototype.depositFunds = function(deposit) {
-  deposit.id = this.assignId();
-  this.name[NewAccount.id] = name; 
+BankAccount.prototype.depositFunds = function(depositAmount) {
+  // deposit.id = this.assignId();
+  // this.name[NewAccount.id] = name; 
+  this.balance += depositAmount;
 };
 
-BankAccount.prototype.withdrawFunds = function(withdrawal) {
-
+BankAccount.prototype.withdrawFunds = function(withdrawalAmount) {
+  this.balance -= withdrawalAmount;
 };
 
-
-
-
-
-
-
-// Business Logic Funds
-function DepositWithdraw () {
-  this.deposit = {};
-  this.withdraw = 0;
-}
 
 // Business Logic for Name
-function NewAccount(name, initialDeposit, depositAmount, withdrawalAmount) {
-  this.name = name;
-  this.initialDeposit = initialDeposit; 
-}
+// function NewAccount(name, initialDeposit) {
+//   this.name = name;
+//   this.initialDeposit = initialDeposit; 
+// }
 
-BankAccount.prototype.registration = function(newAccount) {
-  return this.name + this.initialDeposit; 
-}; 
+// BankAccount.prototype.registration = function(newAccount) {
+  
+//   return this.name + this.initialDeposit; 
+// }; 
 
 
 
@@ -42,6 +33,14 @@ BankAccount.prototype.registration = function(newAccount) {
 // UI Logic
 
 $(document).ready(function() {
+  // handling user name and initial deposit form submit
   
+  // let bankAccount1 = new BankAccount(name, deposit);
+
+
+  // bankAccount1.depositFunds(depositAmount);
+  // bankAccount1.withdrawFunds(withdrawAmount);
+
+
 });
 
