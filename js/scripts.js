@@ -33,13 +33,31 @@ BankAccount.prototype.withdrawFunds = function(withdrawalAmount) {
 // UI Logic
 
 $(document).ready(function() {
-  // handling user name and initial deposit form submit
+  let bankAccount1 = {};
+
+  $("form#newAccount").submit(function(event) {
+    event.preventDefault();
+    const userName = $("#newName").val();
+    const initialDeposit = $("#initialDeposit").val();
+
+    bankAccount1 = new BankAccount(userName, initialDeposit);
+  });
   
-  // let bankAccount1 = new BankAccount(name, deposit);
+  $("form#depositWithdrawal").submit(function(event) {
+    event.preventDefault();
+    const newDeposit= $("#newDeposit").val();
+    // const newWithdrawal = $("#newWithdrawal").val();
 
+    bankAccount1.depositFunds(newDeposit);
+    // bankAccount1.withdrawFunds(newWithdrawal);
 
-  // bankAccount1.depositFunds(depositAmount);
-  // bankAccount1.withdrawFunds(withdrawAmount);
+    console.log(bankAccount1.balance);
+  });
+
+  
+
+  
+
 
 
 });
