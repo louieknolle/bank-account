@@ -1,35 +1,23 @@
 // Business Logic for Bank Account
 function BankAccount(name, initialDeposit) {
   this.name = name;
-  this.balance = initialDeposit;
+  this.balance = parseInt(initialDeposit);
+  this.updateBalance();
 }
 
 BankAccount.prototype.depositFunds = function(depositAmount) {
-  // deposit.id = this.assignId();
-  // this.name[NewAccount.id] = name; 
-  this.balance += depositAmount;
+  this.balance += parseInt(depositAmount);
+  this.updateBalance();
 };
 
 BankAccount.prototype.withdrawFunds = function(withdrawalAmount) {
-  this.balance -= withdrawalAmount;
+  this.balance -= parseInt(withdrawalAmount);
+  this.updateBalance();
 };
 
-
-// Business Logic for Name
-// function NewAccount(name, initialDeposit) {
-//   this.name = name;
-//   this.initialDeposit = initialDeposit; 
-// }
-
-// BankAccount.prototype.registration = function(newAccount) {
-  
-//   return this.name + this.initialDeposit; 
-// }; 
-
-
-
-
-
+BankAccount.prototype.updateBalance = function() {
+  $("#currentBalance").html("$" + this.balance.toLocaleString());
+}
 // UI Logic
 
 $(document).ready(function() {
@@ -40,25 +28,29 @@ $(document).ready(function() {
     const userName = $("#newName").val();
     const initialDeposit = $("#initialDeposit").val();
 
+    $("#newName").val();
+    $("#initialDeposit").val();
+  
     bankAccount1 = new BankAccount(userName, initialDeposit);
   });
   
-  $("form#depositWithdrawal").submit(function(event) {
+  $("form#fundsDeposit").submit(function(event) {
     event.preventDefault();
     const newDeposit= $("#newDeposit").val();
-    // const newWithdrawal = $("#newWithdrawal").val();
 
+    $("#newDeposit").val();
+    
     bankAccount1.depositFunds(newDeposit);
-    // bankAccount1.withdrawFunds(newWithdrawal);
-
-    console.log(bankAccount1.balance);
   });
 
-  
+  $("form#fundsWithdrawal").submit(function(event) {
+    event.preventDefault();
+    const newWithdrawal = $("#newWithdrawal").val();
 
-  
+    $("#newWithdrawal").val();
 
-
-
+    bankAccount1.withdrawFunds(newWithdrawal);
+    
+  });
 });
 

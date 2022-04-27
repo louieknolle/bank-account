@@ -1,0 +1,85 @@
+.container {
+ 
+}
+
+#myVideo {
+  object-fit: cover;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+button {
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+
+.form-control:focus {
+  border-color: #1f47fa;  
+  box-shadow: inset;
+  -webkit-box-shadow: none;
+} 
+
+.form-control {
+  border: grey solid 1.5px;
+  width: 50%;
+  margin-left: 85px;
+}
+
+h1 {
+  text-align: center;
+}
+
+#registerAccount {
+  display: flex;
+  justify-content: center;
+  
+  background-color: #585858;
+  opacity: .9;
+  color: aliceblue;
+  
+  
+}
+
+
+#balance {
+  margin-top: 30px;
+  background-color: #585858;
+  opacity: .9;
+  color: aliceblue;
+  text-align: center;
+  padding-top: 80px;
+}
+
+#fundsDeposit {
+  margin-top: 30px;
+  background-color: #585858;
+  opacity: .9;
+  color: aliceblue;
+  text-align: center;
+  border-radius: 10%;
+}
+
+#fundsWithdrawal {
+  margin-top: 30px;
+  background-color: #585858;
+  opacity: .9;
+  color: aliceblue;
+  text-align: center;
+  border-radius: 10%;
+}
+
+#currentBalance {
+  background-color: aliceblue;
+  color: #585858;
+  width: 50%;
+  margin-left: 80px;
+  margin-top: 20px;
+  
+}
+
+.col-md-6 {
+  border-radius: 10%;
+}
