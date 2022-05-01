@@ -1,7 +1,7 @@
-.container {
- 
+body {
+  width: 70%;
+  margin: auto;
 }
-
 #myVideo {
   object-fit: cover;
   position: fixed;
@@ -9,7 +9,9 @@
   bottom: 0;
   min-width: 100%;
   min-height: 100%;
+  z-index: -1;
 }
+
 
 button {
   margin-top: 5px;
@@ -25,61 +27,81 @@ button {
 .form-control {
   border: grey solid 1.5px;
   width: 50%;
-  margin-left: 85px;
+  margin: auto;
 }
 
 h1 {
   text-align: center;
+  color: #1f47fa;
+  opacity: .8;
+  background-color: aliceblue;
+  padding: 5px;
+}
+
+.bankingContainer {
+  display: flex;
+justify-content: center;
+}
+
+#changeBalance {
+  display: flex;
+  justify-content: center;
+  margin-top: 1em;
 }
 
 #registerAccount {
   display: flex;
   justify-content: center;
-  
   background-color: #585858;
   opacity: .9;
   color: aliceblue;
-  
-  
+  text-align: center;
+  width: 30%;
+  border-radius: 10%;
+  margin-right: .5em;
 }
-
 
 #balance {
-  margin-top: 30px;
   background-color: #585858;
   opacity: .9;
   color: aliceblue;
   text-align: center;
-  padding-top: 80px;
+  width: 30%;
+  height: auto;
+  border-radius: 10%;
+  margin-left: .5em;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }
 
-#fundsDeposit {
-  margin-top: 30px;
+.deposit {
   background-color: #585858;
   opacity: .9;
   color: aliceblue;
   text-align: center;
   border-radius: 10%;
+  width: 30%;
+  margin-right: .5em;
 }
 
-#fundsWithdrawal {
-  margin-top: 30px;
+.withdraw {
   background-color: #585858;
   opacity: .9;
   color: aliceblue;
   text-align: center;
   border-radius: 10%;
+  width: 30%;
+  margin-left: .5em;
 }
 
 #currentBalance {
   background-color: aliceblue;
   color: #585858;
-  width: 50%;
-  margin-left: 80px;
-  margin-top: 20px;
-  
+  width: fit-content;
+  height: fit-content;
+  align-self: flex-start;
+  padding: 1px;
 }
 
-.col-md-6 {
-  border-radius: 10%;
-}

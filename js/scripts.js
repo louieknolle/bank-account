@@ -27,9 +27,6 @@ $(document).ready(function() {
     event.preventDefault();
     const userName = $("#newName").val();
     const initialDeposit = $("#initialDeposit").val();
-
-    $("#newName").val();
-    $("#initialDeposit").val();
   
     bankAccount1 = new BankAccount(userName, initialDeposit);
   });
@@ -37,8 +34,6 @@ $(document).ready(function() {
   $("form#fundsDeposit").submit(function(event) {
     event.preventDefault();
     const newDeposit= $("#newDeposit").val();
-
-    $("#newDeposit").val();
     
     bankAccount1.depositFunds(newDeposit);
   });
@@ -46,8 +41,6 @@ $(document).ready(function() {
   $("form#fundsWithdrawal").submit(function(event) {
     event.preventDefault();
     const newWithdrawal = $("#newWithdrawal").val();
-
-    $("#newWithdrawal").val();
 
     bankAccount1.withdrawFunds(newWithdrawal);
     

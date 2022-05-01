@@ -9,13 +9,15 @@
   </head>
 
   <body>
+    <video playsinline autoplay muted loop id="myVideo">
+      <source src="img/money2.mp4" type="video/mp4">
+    </video>
     <div class="container">
-      <video playsinline autoplay muted loop id="myVideo">
-        <source src="img/money2.mp4" type="video/mp4">
-      </video>
-      <h1>Welcome to OLGON Savings Bank!</h1>
-      <div class="row">
-        <div id="registerAccount" class="col-md-6">
+      
+      <h1>Welcome to Bottom-Dollar Savings Bank!</h1>
+      
+      <div class="bankingContainer">
+        <div id="registerAccount">
           <form action="" id="newAccount">
             <h3>Register for a new account</h3>
             <label for="newName">Name:</label>
@@ -25,13 +27,14 @@
             <button type="submit" class="btn-primary">Register Account</button>
           </form>
         </div>
-        <div id="balance" class="col-md-6">
+        <div id="balance">
           <h3>Current Balance:</h3>
           <div id="currentBalance"></div>
         </div>
       </div>
-      <div id="changeBalance" class="row">
-        <div class="col-md-6">
+      
+      <div id="changeBalance">
+        <div class="deposit">
         <form action="" id="fundsDeposit">
           <h3>Deposit funds</h3>
           <label for="newDeposit">Deposit Amount:</label>
@@ -39,7 +42,7 @@
           <button type="submit" class="btn-primary">Deposit</button>
         </form>
       </div>
-      <div class="col-md-6">
+      <div class="withdraw">
         <form action="" id="fundsWithdrawal">
           <h3>Withdraw Funds</h3>
           <label for="newWithdrawal">Withdrawal Amount:</label>
@@ -47,6 +50,10 @@
           <button type="submit" class="btn-primary">Withdraw</button>
         </form>
       </div>
+
+      
     </div>
+  
+    
   </body>
 </html>
